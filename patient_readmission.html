@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Readmission Analysis - Project</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h1><a href="index.html">← Back to Portfolio</a></h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>🔍 Hospital Readmission Analysis</h2>
+            <p><strong>Uncovering patterns in patient readmissions using SQL-based data analysis.</strong></p>
+        </section>
+
+        <section>
+            <h3>📌 Introduction</h3>
+            <p>Hospital readmissions are a major challenge in healthcare, leading to increased costs and patient risks. 
+               This project examines hospital readmission data to identify key factors contributing to high readmission rates, 
+               enabling better decision-making for patient care and hospital management.</p>
+        </section>
+
+        <section>
+            <h3>🎯 Key Objectives</h3>
+            <ul>
+                <li>Analyze hospital readmission trends based on <strong>age, gender, discharge destinations, and medical conditions</strong>.</li>
+                <li>Assess the <strong>impact of diabetes medications</strong> on patient readmissions.</li>
+                <li>Utilize advanced <strong>SQL techniques</strong> to derive meaningful insights from healthcare data.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📊 Data Overview</h3>
+            <p>The dataset consists of thousands of hospital admission records, including:</p>
+            <ul>
+                <li> <strong>Patient demographics:</strong> Age, gender, race.</li>
+                <li> <strong>Admission details:</strong> Type, source, time in hospital.</li>
+                <li> <strong>Medical history:</strong> Diagnoses, procedures, medications.</li>
+                <li> <strong>Treatment details:</strong> Diabetes medication usage, insulin prescriptions.</li>
+                <li> <strong>Readmission status:</strong> Patients readmitted within 30 days vs. beyond 30 days.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🛠 Data Processing</h3>
+            <p>The dataset required extensive preprocessing before analysis, including:</p>
+            <ul>
+                <li> <strong>Handling Missing Data:</strong> Columns with excessive missing values (e.g., "weight", "payer_code") were dropped, while others were filled with appropriate values (e.g., "Unknown" for categorical variables).</li>
+                <li> <strong>Data Standardization:</strong> Categorical variables like "Gender" were standardized (e.g., merging variations like "M", "Male").</li>
+                <li> <strong>Feature Engineering:</strong> Admission sources, diagnoses, and medications were grouped for better interpretability.</li>
+                <li> <strong>SQL-Based Processing:</strong> Used **CTEs, window functions, and aggregations** to optimize queries and improve insights.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📊 Exploratory Data Analysis (EDA) & Findings</h3>
+
+            <h4>1️⃣ Total Readmitted Patients</h4>
+            <img src="images/readmission_table.jpg" alt="Total Readmissions Table" width="25%" height="150px">
+            <p>🔢 <strong>Total patients readmitted:</strong> <strong>46.09%</strong> of the dataset had hospital readmissions.</p>
+
+            <h4>2️⃣ Readmission Trends by Age & Gender</h4>
+            <img src="images/readmission_by_age.jpg" alt="Readmissions by Age" width="45%" height="300px">
+            <img src="images/readmission_by_gender.png" alt="Readmissions by Gender" width="45%" height="150px">
+            <ul>
+                <li>📊 <strong>Older patients (60+ years)</strong> have a significantly higher readmission rate.</li>
+                <li>👨‍⚕️ <strong>Gender has no significant impact</strong> on readmission rates. Male and female patients have similar readmission percentages.</li>
+            </ul>
+
+            <h4>3️⃣ Readmissions by Medical Specialty</h4>
+            <img src="images/readmission_by_specialty.png" alt="Readmissions by Medical Specialty" width="40%">
+            <ul>
+                <li>🏥 <strong>Internal Medicine & Emergency/Trauma</strong> show the highest readmission rates.</li>
+                <li>🩺 Specialties like <strong>Cardiology & Endocrinology</strong> also contribute significantly.</li>
+            </ul>
+
+            <h4>4️⃣ Readmissions by Diagnosis</h4>
+            <img src="images/readmission_by_diagnosis.jpg" alt="Readmissions by Diagnosis" width="25%" height="250px">
+            <ul>
+                <li>❤️ <strong>Heart failure (ICD-9 Code: 428)</strong> is the leading cause of readmissions.</li>
+                <li>🫁 Respiratory conditions like <strong>Pneumonia & COPD</strong> also have high readmission risks.</li>
+            </ul>
+
+            <h4>5️⃣ Readmissions by Admission Source</h4>
+            <img src="images/readmission_by_admission_source.png" alt="Readmissions by Admission Source" width="40%">
+            <ul>
+                <li>🚑 Patients admitted through the <strong>Emergency Room</strong> have the <strong>highest</strong> readmission rate.</li>
+                <li>🏥 <strong>Hospital transfers</strong> also contribute significantly to readmissions.</li>
+            </ul>
+
+            <h4>6️⃣ Impact of Diabetes Medications</h4>
+            <img src="images/diabetes_medications.jpg" alt="Impact of Diabetes Medications on Readmissions" width="55%" height="250px">
+            <ul>
+                <li>💊 <strong>Insulin users</strong> have the highest readmission rates <strong>(36.03%)</strong>.</li>
+                <li>🩸 Oral medications like <strong>Metformin & Glyburide</strong> show lower readmission risks.</li>
+            </ul>
+
+            <h4>7️⃣ Correlation Analysis Between Numeric Variables & Readmissions</h4>
+            <img src="images/correlation_table.jpg" alt="Correlation Analysis Table" width= 50%">
+            <p>📉 <strong>Weak correlation</strong> observed between numerical variables and readmissions, suggesting other factors play a bigger role.</p>
+        </section>
+
+        <section>
+            <h3>✅ Conclusion & Recommendations</h3>
+            <ul>
+                <li> Older patients & chronic disease patients have higher readmission risks. Hospitals should focus on post-discharge monitoring.</li>
+                <li> Patients on insulin require closer follow-up, as they show significantly higher readmissions.</li>
+                <li> Emergency admissions & hospital transfers show the highest readmission risks.</li>
+                <li> Improving post-discharge care in SNFs & hospitals can reduce readmission rates.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📜 Want to See the Full Project?</h3>
+            <p>Check out the complete project with SQL queries, analysis, and insights.</p>
+            <a href="https://github.com/parth-16/hospital-readmission-analysis" class="button">View Full Project</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="index.html">Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>

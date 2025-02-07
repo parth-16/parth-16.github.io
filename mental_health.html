@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="content-wrapper">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health in the Workplace - Project</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h1><a href="index.html">← Back to Portfolio</a></h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2>Mental Health in the Workplace: An Analytical Deep Dive</h2>
+            <p><strong>Exploring mental health trends, workplace policies, and their impact on employees.</strong></p>
+        </section>
+
+        <section>
+            <h3>📌 Introduction</h3>
+            <p>Workplace mental health is a crucial factor influencing employee well-being, productivity, and retention. 
+            However, many companies still fail to provide the necessary support. Using data from the OSMI Mental Health 
+            in Tech Survey, this project uncovers key insights into workplace mental health trends, company policies, 
+            and employee experiences.</p>
+            
+        </section>
+
+        <section>
+            <h3>🎯 Key Objectives</h3>
+            <ul>
+                <li> Identify workplace factors impacting employee mental health.</li>
+                <li> Examine correlations between age, gender, and mental health struggles.</li>
+                <li> Provide actionable insights for companies to foster a healthier work environment.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🛠 Data Overview & Cleaning</h3>
+            <p>The dataset consists of <strong>1260</strong> from professionals worldwide. To ensure accurate analysis, we:</p>
+            <ul>
+                <li> Standardized gender responses (e.g., "male", "M", "Man" → "Male").</li>
+                <li> Handled missing data through imputation and categorical grouping.</li>
+                <li> Transformed variables (e.g., company size ranges: "1-10" → "1 to 10").</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📊 Exploratory Data Analysis (EDA) & Findings</h3>
+
+            <h4>1️⃣ How Age and Gender Affect Mental Health</h4>
+            <img src="images/age_distribution.jpg" alt="Age Distribution Graph" width="35%" height="350px">
+            <p><strong>Age Distribution:</strong> The median age of respondents is <strong>31 years</strong>, with younger employees reporting higher interference levels.</p>
+
+            <p><strong>Gender & Age vs Willingness to Discuss Mental Health:</strong></p>
+            <!-- <div class="image-container"> -->
+            <img src="images/gender_willingness.jpg" alt="Gender vs Willingness Graph" width="35%" height="350px">
+            <img src="images/Age_vs_mentalhealth.jpg" alt="Gender vs Willingness Graph" width="35%" height="350px">
+            <!-- </div> -->
+            
+            <ul>
+                <li>📉It can be inferred that willingness to discuss mental health does not depend on the gender and age of the person</li>
+            </ul>
+            
+            
+            <h4>2️⃣ Employer Support & Mental Health Benefits</h4>
+            <p><strong>Availability of Mental Health Benefits:</strong></p>
+            <!-- <div class="image-container"> -->
+                <img src="images/availability.jpg" alt="Availability of Mental Health Benefits Graph" width="35%" height="350px">
+                <img src="images/mental_health_benefits.jpg" alt="Mental Health Benefits Graph" width="35%" height="350px">
+            <!-- </div> -->
+            
+            <ul>
+                <li>📊 <strong>62%</strong> of respondents indicate that mental health benefits are either not provided by their employer or they don't know about it.</li>
+                <li>🏢 Larger companies <strong>(>500 employees)</strong> provide <strong>more health benefits</strong> as they often have more resources to offer benefits.</li>
+                <li>📊 Smaller organizations <strong>struggle</strong> to provide adequate support.</li>
+            </ul>
+            
+            <p><strong>Are the Mental Health Programs actually effective?:</strong></p>
+            <!-- <div class="image-container"> -->
+                <img src="images/Discussion .jpg" alt="Discussion of Mental Health in Wellness Programs Graph" width="35%" height="350px">
+                <img src="images/Ease_leave.jpg" alt="Ease of Taking Medical Leave for Mental Health Graph" width="35%" height="350px">
+            <!-- </div> -->
+            
+            <ul>
+                <li>⚠️ From the first graph, <strong>66.9%</strong> of employers have not incorporated mental health discussions into wellness programs</li>
+                <li>📉 From the second graph, we can see that <strong>17.8%</strong> employees find it difficult and <strong>44.8%</strong> don't know if it would be easy for them to take leave for mental health conditions.</li>
+            </ul>
+
+            <h4>3️⃣ Workplace Stigma & Employee Willingness to Speak Up</h4>
+            <p><strong>Perceived Stigma and Willingness in Discussing Mental Health:</strong></p>
+            <!-- <div class="image-container"> -->
+                <img src="images/workplace_stigma.jpg" alt="Workplace Stigma Graph" width="35%" height="350px">
+                <img src="images/willingness_to_discuss.jpg" alt="Willingness to discuss mental health Graph" width="35%" height="350px">
+            <!-- </div> -->
+            
+            <ul>
+                <li>⚠️ From the first graph, we can see that only <strong>38.9%</strong> of employees believe discussing mental health could not harm their careers. Rest either believe that it can harm their careers or they are unsure about it.</li>
+                <li>📉 From the second graph, we can see that <strong>65%</strong> of respondents discuss mental health with only some of their coworkers assuming that they have developed close friendship with them. But they are hesitant to discuss mental health with everyone.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>✅ Conclusion & Recommendations</h3>
+            <ul>
+                <li> Employees in small companies report higher workplace mental health struggles due to lack of programs.</li>
+                <li> Mental health benefits alone are not enough—reducing stigma is critical.</li>
+                <li> Companies should implement clearer mental health policies, flexible leave options, and employee support programs to maintain a healthy work environment.</li>
+            </ul>
+            <p><strong>Final Thought:</strong> This analysis provides data-backed insights to help companies create healthier work environments.</p>
+        </section>
+
+        <section>
+            <h3>📜 Want to See the Full Project?</h3>
+            <p>Check out the complete project notebook with code and visualizations.</p>
+            <a href="https://github.com/parth-16/mental-health-EDA" class="button">View Full Project</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p><a href="index.html">Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</div>
+</html>
