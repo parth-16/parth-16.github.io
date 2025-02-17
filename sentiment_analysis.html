@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Project</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h1><a href="index.html">← Back to Portfolio</a></h1>
+    </header>
+
+    <!-- Main Content -->
+    <div class="content-wrapper">
+    <main>
+        <section>
+            <h2>Twitter Sentiment Analysis: Understanding Emotions in Tweets</h2>
+            <p><strong>Analyzing social media sentiment using machine learning and NLP techniques.</strong></p>
+        </section>
+
+        <section>
+            <h3>📌 Introduction</h3>
+            <p>Sentiment analysis helps us determine whether a given text expresses a <strong>positive</strong> or <strong>negative</strong> sentiment.  
+            In this project, we used <strong>machine learning models</strong> to classify tweets as either <strong>positive (1) or negative (0)</strong>.  
+            We leveraged <strong>Natural Language Processing (NLP)</strong> techniques for text preprocessing and machine learning models for classification.</p>
+        </section>
+
+        <section>
+            <h3>🎯 Key Objectives</h3>
+            <ul>
+                <li>Understand the distribution of positive and negative tweets.</li>
+                <li>Perform <strong>text preprocessing</strong> (removal of stopwords, punctuation, special characters, etc.).</li>
+                <li>Build <strong>multiple machine learning models</strong> and evaluate their performance.</li>
+                <li>Visualize results with <strong>confusion matrices and accuracy scores</strong>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📊 Dataset Overview</h3>
+            <p>The dataset consists of tweets labeled as <strong>positive (1) or negative (0)</strong>.</p>
+            <ul>
+                <li> <strong>Total Tweets Analyzed:</strong> 100,000 (50,000 positive, 50,000 negative)</li>
+                <li> <strong>Target Variable:</strong> Binary classification (0 = Negative, 1 = Positive)</li>
+            </ul>
+            <img src="images/tweet_distribution.jpg" alt="Tweet Distribution Graph" width="40%">
+        </section>
+
+        <section>
+            <h3>🛠 Text Preprocessing</h3>
+            <p>To improve model performance, we cleaned and transformed the text:</p>
+            <ul>
+                <li> <strong>Converted tweets to lowercase</strong></li>
+                <li> <strong>Removed stopwords</strong> (e.g., "the", "is", "in")</li>
+                <li> <strong>Removed special characters & punctuation</strong></li>
+                <li> <strong>Tokenization:</strong> Split text into words</li>
+                <li> <strong>Stemming & Lemmatization:</strong> Converted words to their root forms</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🔢 Feature Engineering</h3>
+            <p>We used <strong>TF-IDF Vectorization</strong> to convert text into numerical features for model training.</p>
+            <ul>
+                <li> <strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong> used to weigh important words.</li>
+                <li> <strong>n-grams (1,2)</strong> included to capture context.</li>
+                <li> <strong>500,000 features</strong> were extracted from tweets.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>🚀 Machine Learning Models & Evaluation</h3>
+            <p>We trained multiple models and compared their accuracy:</p>
+            
+            <h4>1️⃣ Logistic Regression</h4>
+            <p>✅ <strong>Accuracy:</strong> 78.98%</p>
+            <img src="images/confusion_matrix_lr.jpg" alt="Logistic Regression Confusion Matrix" width="40%">
+            
+            <h4>2️⃣ K-Nearest Neighbors (KNN)</h4>
+            <p>✅ <strong>Accuracy:</strong> 53.86%</p>
+            <img src="images/confusion_matrix_knn.jpg" alt="KNN Confusion Matrix" width="40%">
+            
+            <h4>3️⃣ Naive Bayes</h4>
+            <p>✅ <strong>Accuracy:</strong> 77.18%</p>
+            <img src="images/confusion_matrix_nb.jpg" alt="Naive Bayes Confusion Matrix" width="40%">
+            
+            <h4>4️⃣ Random Forest</h4>
+            <p>✅ <strong>Accuracy:</strong> 77.92%</p>
+            <img src="images/confusion_matrix_rf.jpg" alt="Random Forest Confusion Matrix" width="40%">
+            
+            <h4>5️⃣ Support Vector Machine (SVM)</h4>
+            <p>✅ <strong>Accuracy:</strong> 79.72%</p>
+            <img src="images/confusion_matrix_svm.jpg" alt="SVM Confusion Matrix" width="40%">
+
+        </section>
+
+        <section>
+            <h3>📈 Key Findings</h3>
+            <ul>
+                <li> <strong>Support Vector Machine (SVM)</strong> achieved the <strong>highest accuracy (79.72%)</strong>, making it the best model.</li>
+                <li> <strong>Logistic Regression and Random Forest</strong> also performed well.</li>
+                <li> <strong>KNN performed the worst</strong> due to its sensitivity to high-dimensional data.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>✅ Conclusion & Next Steps</h3>
+            <ul>
+                <li> <strong>SVM is the best model</strong> for classifying tweets accurately.</li>
+                <li> <strong>Further improvements</strong> can be made by incorporating deep learning models like LSTMs.</li>
+                <li> This project showcases the power of <strong>NLP & Machine Learning</strong> in analyzing social media data.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>📜 Want to See the Full Project?</h3>
+            <p>Check out the complete project notebook with code and visualizations.</p>
+            <a href="https://github.com/parth-16/SentimentAnalysis" class="button">View Full Project</a>
+        </section>
+    </main>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p><a href="index.html">Back to Portfolio</a></p>
+    </footer>
+
+</body>
+</html>

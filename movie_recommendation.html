@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movie Recommendation System</title>
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1><a href="index.html">Back to Portfolio</a></h1>
+			</header>
+
+			<!-- Main -->
+            <!-- <div class="content-wrapper"> -->
+			<section id="main" class="wrapper">
+				<div class="content-wrapper">
+					<h2 class="major">Movie Recommendation System</h2>
+					<!-- <span class="image fit"><img src="images/movie_recommendation_home.png" alt="Movie Recommendation System" /></span> -->
+
+					<!-- Overview -->
+					<h3>📌 Project Overview</h3>
+					<p>Choosing a movie to watch is often a daunting task due to the overwhelming number of available options. This project addresses this challenge by implementing a <strong>content-based filtering recommendation system</strong> using <strong>Natural Language Processing (NLP) and Machine Learning techniques</strong>.</p>
+
+					<!-- How It Works -->
+					<h3>⚙️ How It Works</h3>
+					<p>The recommendation system operates based on movie descriptions by analyzing textual data. It follows these steps:</p>
+					<ol>
+						<li>Extracts textual descriptions (e.g., genres, overviews) from a <strong>movie dataset</strong>.</li>
+						<li>Converts the text into <strong>numerical vectors</strong> using <strong>TF-IDF Vectorization</strong>.</li>
+						<li>Computes similarity scores using <strong>Cosine Similarity</strong>.</li>
+						<li>Recommends the most similar movies based on the user's selected movie.</li>
+					</ol>
+
+					<!-- TF-IDF Explanation -->
+					<h3>📖 Understanding TF-IDF (Term Frequency - Inverse Document Frequency)</h3>
+					<p>TF-IDF is a technique that converts text into numerical values by assigning importance to words based on their frequency across multiple documents.</p>
+					<ul>
+						<li><strong>Term Frequency (TF):</strong> Measures how frequently a term appears in a document.</li>
+						<li><strong>Inverse Document Frequency (IDF):</strong> Downweights words that appear frequently across multiple documents (e.g., "the", "and").</li>
+					</ul>
+					<p>Formula:</p>
+					<p><code>TF-IDF = (Term Frequency) * log(Total Documents / Documents with Term)</code></p>
+					<p>This ensures that commonly occurring words don’t dominate recommendations.</p>
+
+					<!-- Cosine Similarity Explanation -->
+					<h3>📏 Cosine Similarity - Finding Similar Movies</h3>
+					<p>After converting movie descriptions into numerical vectors, we use <strong>Cosine Similarity</strong> to measure how similar two movies are.</p>
+					<p><strong>Cosine Similarity Formula:</strong></p>
+					<p>
+						<code>cos(θ) = (A ⋅ B) / (||A|| * ||B||)</code>
+					</p>
+					<p>Where:</p>
+					<ul>
+						<li><code>A</code> and <code>B</code> are the TF-IDF vectors of two movie descriptions.</li>
+						<li><code>||A||</code> and <code>||B||</code> are the magnitudes of the vectors.</li>
+						<li><strong>A higher cosine similarity score indicates a stronger match</strong>.</li>
+					</ul>
+
+					<!-- Features -->
+					<h3>🔥 Key Features</h3>
+					<ul>
+						<li>🎬 <strong>Content-Based Filtering</strong>: Finds movies with similar descriptions.</li>
+						<li>🔍 <strong>Instant Search</strong>: Type in a movie name and receive immediate recommendations.</li>
+						<li>📊 <strong>Movie Insights</strong>: Fetches real-time <strong>posters, ratings, and overviews</strong> via the <strong>TMDB API</strong>.</li>
+						<li>🌐 <strong>User-Friendly Web Interface</strong>: Built using Flask.</li>
+					</ul>
+
+					<!-- Technologies Used -->
+					<h3>🛠 Technologies Used</h3>
+					<ul>
+						<li>Python (Pandas, NumPy, Scikit-Learn, Flask)</li>
+						<li>Natural Language Processing (TF-IDF, Cosine Similarity)</li>
+						<li>API Integration (TMDB API)</li>
+						<li>HTML, CSS, JavaScript</li>
+					</ul>
+
+					<!-- Screenshots -->
+					<h3>📷 Screenshots</h3>
+					<div class="box alt">
+						<div class="row gtr-uniform">
+							<div class="col-6"><span class="image fit"><img src="images/movie_recommendation_home.jpg" alt="Home Page" height="450px" /></span></div>
+							<div class="col-6"><span class="image fit"><img src="images/movie_recommendation_results.jpg" alt="Recommendation Page" height="450px" /></span></div>
+						</div>
+					</div>
+
+					<!-- Call to Action -->
+					<ul class="actions">
+						<li><a href="https://github.com/parth-16/movie-recommendation-system" class="button primary" target="_blank">🔗 View on GitHub</a></li>
+						<li><a href="index.html" class="button">⬅ Back to Portfolio</a></li>
+					</ul>
+				</div>
+			</section>
+            <!-- </div> -->
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

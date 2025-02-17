@@ -88,6 +88,46 @@
 					</div>
 				</section>
 
+				<!-- Project 3: Movie Recommendation System -->
+				<section id="three" class="wrapper spotlight style3">
+					<div class="inner">
+						<a href="movie_recommendation.html" class="image"><img src="images/movies.jpg" alt="Movie Recommendation System" /></a>
+						<div class="content">
+							<h2 class="major">Machine Learning-Powered Movie Recommendation System</h2>
+							<p>Using <strong>Machine Learning and Natural Language Processing</strong>, this project recommends movies based on user preferences and sentiment analysis of movie reviews.</p>
+							<h4 class="major">Key Features:</h4>
+								<ul>
+									<li>🎞️ <strong>Personalized movie recommendations</strong> using <strong>TF-IDF & Cosine Similarity</strong></li>
+									<li>🔍 <strong>Real-time movie search & details</strong> fetched from <strong>TMDB API</strong></li>
+									<li>📝 <strong>Sentiment Analysis</strong> on movie reviews using <strong>NLTK</strong></li>
+								</ul>
+							<h4 class="major">🚀 Skills Used:</h4>
+								<ul>
+									<li><strong>Python, Machine Learning, NLP, Flask, API Integration, TF-IDF</strong></li>
+								</ul>
+								<button class="special" onclick="redirectToMovies()">🎬 Try the Recommendation System</button>
+						</div>
+					</div>
+				</section>
+				
+				<!-- Project 4: Sentiment Analysis on Tweets -->
+				<section id="four" class="wrapper alt spotlight style4">
+					<div class="inner">
+						<a href="sentiment_analysis.html" class="image"><img src="images/sentiment.jpg" alt="Sentiment Analysis" /></a>
+						<div class="content">
+							<h2 class="major">Sentiment Analysis on Tweets</h2>
+								<p>Social media is a powerful tool to understand public opinion. This project explores sentiment analysis on Twitter data, leveraging machine learning and NLP to classify tweets as positive or negative.</p>
+									<h4 class="major">Key Steps:</h4>
+										<ul>
+											<li>📊 Used <strong>Sentiment140</strong> dataset with <strong>1.6M tweets</strong></li>
+											<li>🧹 <strong>Preprocessed</strong> data: removed stopwords, URLs, and special characters</li>
+											<li>🔢 <strong>Vectorized</strong> text data using <strong>TF-IDF</strong></li>
+											<li>🛠 Trained <strong>Logistic Regression, Naïve Bayes, SVM, and Random Forest models</strong></li>
+										</ul>
+										<button class="special" onclick="redirectToSentiment()">📊 Explore Sentiment Analysis</button>
+						</div>
+					</div>
+				</section>
 			</section>
 
 			<!-- Footer -->
@@ -128,6 +168,15 @@
 			function redirectToReadmission() {
 				window.location.href = "patient_readmission.html";
 			}
+
+			function redirectToMovies() { 
+				window.location.href = "movie_recommendation.html"; 
+			}
+
+			function redirectToSentiment() { 
+				window.location.href = "sentiment_analysis.html"; 
+			}
+
 		</script>
 
 		<script src="assets/js/jquery.min.js"></script>
